@@ -43,13 +43,22 @@
         }
 
         body {
-            background-color: #0a0a0a;
+            background-color: #000;
             color: #f3f4f6;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
     </style>
 </head>
 <body class="antialiased flex flex-col min-h-screen relative overflow-x-hidden">
+
+    <!-- Video Background -->
+    <div class="fixed inset-0 z-[-2] w-full h-full overflow-hidden bg-black">
+        <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+            <source src="https://files.catbox.moe/donh2p.mov" type="video/mp4">
+        </video>
+        <!-- Dark overlay to ensure text readability -->
+        <div class="absolute inset-0 bg-black/75 backdrop-blur-[2px]"></div>
+    </div>
 
     <!-- Background effects -->
     <div class="fixed inset-0 z-[-1] opacity-20 pointer-events-none">
@@ -284,23 +293,31 @@
             
             <div class="text-center mb-6">
                 <div class="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-gold text-2xl">
-                    <i class="fa-solid fa-gem"></i>
+                    <i class="fa-solid fa-money-bill-transfer"></i>
                 </div>
                 <h3 class="text-2xl font-black text-white mb-2">Rejoindre le VIP</h3>
                 <p class="text-gray-400 text-sm">Prix: <span class="text-gold font-bold">1100 DH</span> / Mois</p>
             </div>
 
-            <p class="text-gray-300 text-sm text-center mb-6">
-                Pour finaliser votre inscription et accéder immédiatement aux signaux, veuillez nous contacter directement via WhatsApp. Nous acceptons les virements CIH, Attijari, Bank Populaire ou Binance Pay.
-            </p>
+            <div class="bg-black/50 border border-gray-800 rounded-xl p-4 mb-6 text-center">
+                <p class="text-gray-300 text-sm mb-3">
+                    Veuillez effectuer le paiement par <span class="text-gold font-bold">Cash Plus</span> au nom de :
+                </p>
+                <div class="bg-gray-800 border border-gold/30 rounded-lg p-3 select-all cursor-pointer hover:border-gold transition-colors" title="Cliquez pour sélectionner">
+                    <span class="text-white text-xl font-mono tracking-widest font-bold">OMAR XAUD</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3">
+                    Une fois le paiement effectué, envoyez la photo du reçu sur WhatsApp pour activer votre accès.
+                </p>
+            </div>
 
-            <a href="https://wa.me/212600000000?text=Bonjour%20Omar%20XAUD,%20je%20souhaite%20m'abonner%20au%20Pack%20VIP%20%C3%A0%201100%20DH." target="_blank" class="w-full bg-green-500 text-black py-4 rounded-xl font-bold text-lg hover:bg-green-400 transition-colors flex justify-center items-center space-x-2">
+            <a href="https://wa.me/212600000000?text=Bonjour%20Omar%20XAUD,%20voici%20le%20re%C3%A7u%20Cash%20Plus%20pour%20l'abonnement%20VIP%20%C3%A0%201100%20DH." target="_blank" class="w-full bg-green-500 text-black py-4 rounded-xl font-bold text-lg hover:bg-green-400 transition-colors flex justify-center items-center space-x-2">
                 <i class="fa-brands fa-whatsapp text-xl"></i>
-                <span>Continuer vers WhatsApp</span>
+                <span>Envoyer le reçu</span>
             </a>
             
             <p class="text-center text-xs text-gray-500 mt-4">
-                L'équipe vous répondra en moins de 5 minutes.
+                Activation immédiate après vérification.
             </p>
         </div>
     </div>
